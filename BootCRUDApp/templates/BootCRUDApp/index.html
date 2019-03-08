@@ -1,5 +1,29 @@
 {% extends 'BootCRUDApp/base.html' %}
 
 {% block content %}
-<h1>In the Index Page</h1>
+{% if allJunk %}
+{% for x in allJunk %}
+<div class="card">
+    <img src="{{x.imageURL}}">
+    <div class="card-body">
+    <div class="card-title">
+        {{x.name}}
+    </div>
+        <div class="card-text">
+        {{x.description}}
+        </div>
+        <div class="card-text">
+            ${{x.price}}
+        </div>
+        <a class ='card-text' href="{% url 'editItem' x.id %}">Edit item</a>
+    </div>
+</div>
+
+{% endfor %}
+{% endif %}
+<form method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button>Submit</button>
+</form>
 {% endblock content %}
