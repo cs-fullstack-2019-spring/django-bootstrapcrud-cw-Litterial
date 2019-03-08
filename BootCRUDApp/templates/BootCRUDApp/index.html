@@ -1,7 +1,9 @@
 {% extends 'BootCRUDApp/base.html' %}
 
 {% block content %}
+
 {% if allJunk %}
+<div class="black">
 {% for x in allJunk %}
 <div class="card">
     <img src="{{x.imageURL}}">
@@ -20,7 +22,9 @@
 </div>
 
 {% endfor %}
+</div>
 {% endif %}
+
 <form method="post">
     {% csrf_token %}
     {{form.as_p}}

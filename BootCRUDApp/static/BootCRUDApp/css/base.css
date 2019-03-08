@@ -3,3 +3,19 @@ img
     height: 100px;
     width: 100px;
 }
+
+div{
+
+}
+
+
+
+.black
+{
+    display: grid;
+grid-template-columns: repeat(3,1fr);
+    grid-column-gap: 20%;
+    column-gap:20%;
+}
+
+
