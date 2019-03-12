@@ -6,3 +6,5 @@ Create a garage sell site that will help people sell their old garbage. The inde
 Add a CSS Grid to this page so you can have multiple items per row.
 
 Bootstrap card can be found here: https://getbootstrap.com/docs/4.0/components/card/
+<hr>
+1.5 points. Edit doesn't work.
